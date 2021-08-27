@@ -4,3 +4,4 @@ class ActorsController < ApplicationController
     render json: {message: actor}
   end
 end
+
