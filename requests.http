@@ -2,4 +2,61 @@ GET http://localhost:3000/movie/3
 
 ###
 
-POST http://localhost:3000/actor/2
+POST http://localhost:3000/actors
+Content-Type: application/json
+
+{
+  "first_name": "Ryan",
+  "last_name": "Gosling",
+  "known_for": "The Notebook"
+}
+
+###
+
+GET http://localhost:3000/actors/6
+
+###
+
+PATCH http://localhost:3000/actors/6
+Content-Type: application/json
+
+{
+  "first_name": "Ryan",
+  "last_name": "Reynolds",
+  "known_for": "Deadpool"
+}
+
+###
+
+DELETE http://localhost:3000/actors/8
+
+###
+
+GET http://localhost:3000/movies
+
+###
+
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+  "title": "Deadpool",
+  "year": "2016",
+  "plot": "Wade Wilson (Ryan Reynolds) is a former Special Forces operative who now works as a mercenary. His world comes crashing down when evil scientist Ajax (Ed Skrein) tortures, disfigures and transforms him into Deadpool."
+}
+
+###
+
+GET http://localhost:3000/movies/3
+
+###
+
+PATCH http://localhost:3000/movies/3
+Content-Type: application/json
+
+{
+  "plot": "Ron Burgundy is San Diego's top-rated newsman in the male-dominated broadcasting of the 1970s, but that's all about to change for Ron and his cronies when an ambitious woman is hired as a new anchor."
+}
+
+###
+
