@@ -17,18 +17,16 @@ GET http://localhost:3000/actors/6
 
 ###
 
-PATCH http://localhost:3000/actors/6
+PATCH http://localhost:3000/actors/2
 Content-Type: application/json
 
 {
-  "first_name": "Ryan",
-  "last_name": "Reynolds",
-  "known_for": "Deadpool"
+  "movie_id": 7
 }
 
 ###
 
-DELETE http://localhost:3000/actors/8
+DELETE http://localhost:3000/actors/5
 
 ###
 
@@ -40,9 +38,9 @@ POST http://localhost:3000/movies
 Content-Type: application/json
 
 {
-  "title": "Deadpool",
-  "year": "2016",
-  "plot": "Wade Wilson (Ryan Reynolds) is a former Special Forces operative who now works as a mercenary. His world comes crashing down when evil scientist Ajax (Ed Skrein) tortures, disfigures and transforms him into Deadpool."
+  "title": "The Grinch",
+  "year": "2018",
+  "plot": "A story of a cynical grump who goes on a mission to steal Christmas, only to have his heart changed by a young girl's generous holiday spirit."
 }
 
 ###
@@ -51,7 +49,7 @@ GET http://localhost:3000/movies/3
 
 ###
 
-PATCH http://localhost:3000/movies/3
+PATCH http://localhost:3000/movies/7
 Content-Type: application/json
 
 {
