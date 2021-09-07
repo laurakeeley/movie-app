@@ -6,10 +6,15 @@ class ActorsController < ApplicationController
     actor = Actor.new(
       first_name: params[:first_name],
       last_name: params[:last_name],
-      known_for: params[:known_for]
+      known_for: params[:known_for],
+      age: params[:age],
+      movie_id: params[:movie_id]
     )
-    actor.save
-    render json: actor
+    if actor.save
+      render json: actor
+    else
+      render json: actor.errors.full_messages
+    end
   end
   def show
     actor = Actor.find(params[:id])
@@ -23,8 +28,11 @@ class ActorsController < ApplicationController
     actor.age = params[:age] || actor.age
     actor.gender = params[:gender] || actor.gender
     actor.movie_id = params[:movie_id] || actor.movie_id
-    actor.save
-    render json: actor
+    if actor.save
+      render json: actor
+    else
+      render json: actor.errors.full_messages
+    end
   end
   def destroy
     actor = Actor.find(params[:id])

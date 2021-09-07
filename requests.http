@@ -6,9 +6,11 @@ POST http://localhost:3000/actors
 Content-Type: application/json
 
 {
-  "first_name": "Ryan",
-  "last_name": "Gosling",
-  "known_for": "The Notebook"
+  "first_name": "Karen",
+  "last_name": "Schuareamer",
+  "known_for": "her moms basement",
+  "age": 40,
+  "movie_id": 2
 }
 
 ###
