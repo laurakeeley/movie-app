@@ -48,15 +48,15 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:3000/movies/3
+GET http://localhost:3000/movies/1
 
 ###
 
-PATCH http://localhost:3000/movies/7
+PATCH http://localhost:3000/movies/1
 Content-Type: application/json
 
 {
-  "plot": "Ron Burgundy is San Diego's top-rated newsman in the male-dominated broadcasting of the 1970s, but that's all about to change for Ron and his cronies when an ambitious woman is hired as a new anchor."
+  "image_url": "https://m.media-amazon.com/images/M/MV5BMTQ2MzYwMzk5Ml5BMl5BanBnXkFtZTcwOTI4NzUyMw@@._V1_.jpg"
 }
 
 ### CREATE USER
@@ -66,8 +66,8 @@ POST http://localhost:3000/users
 Content-Type: application/json
 
 {
-  "name": "Zia",
-  "email": "zia@gmail.com",
+  "name": "Psyko",
+  "email": "psyko@gmail.com",
   "password": "password",
   "password_confirmation": "password"
 }
@@ -82,4 +82,12 @@ Content-Type: application/json
   "genre_id": 3
 }
 
+###CREATE SESSION
+POST http://localhost:3000/sessions
+Content-Type: application/json
+
+{
+  "email": "zia@gmail.com",
+  "password": "password"
+}
 
